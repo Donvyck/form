@@ -9,7 +9,6 @@
       href="https://fonts.googleapis.com/css?family=Raleway"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="/css/main.css">
     <style>
       * {
         /* 
@@ -44,11 +43,11 @@
         -May want to add some padding
         */
         display: block;
-        max-width: 920px;
+        max-width: 400px;
         width: 72%;
         /* border: 3px solid #333; */
         padding: 40px 30px;
-        margin: auto;
+        margin: 40px auto;      
     }
     
     .form-wrap {
@@ -57,8 +56,7 @@
         */
         padding: 20px 20px;        
         background: #f4f4f4;
-        margin-bottom: 20px;
-      }
+        margin-bottom: 20px;      }
 
       .form-wrap h1,
       .form-wrap p {
@@ -91,6 +89,7 @@
         */
         width: 100%;
         padding: 5px;
+        border-radius: 5px;
       }
 
       .form-wrap button {
@@ -101,10 +100,9 @@
           width: 100%;
           padding: 5px;
           background: #49c1a2;
-          border: none ;
-          border-radius: 3px;
           cursor: pointer;
           color: #f4f4f4;
+          border-radius: 5px;
       }
 
       .form-wrap button:hover {
@@ -123,6 +121,10 @@
         margin-top: 15px;
       }
 
+      .form-wrap a {
+        color: #49c1a2;
+      }
+
       footer {
         /* 
         Should be centered
@@ -137,6 +139,23 @@
         */
         color: #49c1a2;
       }
+
+      /* Mobile */
+    @media (max-width: 768px) {
+      #container {
+        max-width: 400px;
+        padding: 0;
+        margin-top: 40px;
+        width: 95%;
+      }
+      .form-wrap {
+        background: #344a72;
+        color: #f4f4f4;
+      }
+
+      
+
+    }
     </style>
   </head>
   <body>
@@ -144,7 +163,7 @@
       <div class="form-wrap">
         <h1>Sign Up</h1>
         <p>It's free and only takes a minute</p>
-        <form action="https://formspree.io/f/moqgrygb" method="POST" >
+        <form>
           <div class="form-group">
             <label for="first-name">First Name</label>
             <input type="text" name="firstName" id="first-name" />
@@ -161,18 +180,13 @@
             <label for="WhatsApp Number">WhatsApp Number</label>
             <input type="phone" name="phone" id="phone" />
           </div>
-         
           <button type="submit" class="btn">Sign Up</button>
           <p class="bottom-text">
             By clicking the Sign Up button, you agree to our
-            <a href="#">Terms & Conditions</a> and
-            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of service</a>
           </p>
         </form>
       </div>
-      <footer>
-        <p>Already have an account? <a href="#">Login Here</a></p>
-      </footer>
     </div>
   </body>
 </html>
